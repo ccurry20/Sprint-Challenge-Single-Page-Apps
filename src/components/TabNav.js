@@ -3,8 +3,9 @@ import { Tab, Menu, Icon } from "semantic-ui-react";
 import { BrowserRouter as Router, Route, NavLink } from "react-router-dom";
 import WelcomePage from "./WelcomePage";
 import CharacterCard from "./CharacterCard.js";
+import CharacterList from "./CharacterList";
 //import CharacterList from "./CharacterList";
-//import LocationCard from "./components/LocationCard";
+import LocationsList from "./LocationsList";
 
 
 // TODO: Add missing tabs below
@@ -17,15 +18,20 @@ export default function TabNav() {
               </NavLink>
             </li>
             <li>
-            <NavLink exact to ="/CharacterCard"> Characters
+            <NavLink exact to ="/CharacterList"> Characters
               </NavLink>
               </li>
               <li>
-              <NavLink exact to ="/LocationCard"> Location
+              <NavLink exact to ="/LocationsList"> Location
               </NavLink>
             </li>
             </ul>
             <Route exact path="/" component={WelcomePage}/>
+            
+            <Route exact path="/CharacterList" component={CharacterList}/>
+
+            <Route exact path="/LocationsList" component={LocationsList}/>
+
          </div>
     )}
     

@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import axios from 'axios';
-import "./index.css"
-import CharacterCard from "./CharacterCard.js";
+import "../index.css"
+import CharacterCard from "./CharacterCard";
 
 export default function CharacterList() {
   // TODO: Add useState to track data from useEffect
-    const [character, setCharacter] = useState([])
+    const [character, setCharacter] = useState([]);
     useEffect(() => {
-      const getCharacter = () => {
+      //const getCharacter = () => {
         axios
         .get("https://rickandmortyapi.com/api/character/")
         .then(response => {
@@ -16,9 +16,8 @@ export default function CharacterList() {
           
         })
         .catch(error => {
-          console.error("Server Error", error);
+          console.log("Server Error", error);
         })
-      }
       }, []);
     
 
@@ -28,13 +27,18 @@ export default function CharacterList() {
   //}, []);
 
   return (
+    <div className="characters-list-wrapper">
     <section className="character-list grid-view">
-      {console.log(character)};
-      <h2>character.map (char => (
-      return <CharacterCard character={char} />;
-      </h2>
-      })}
-    </section>
+      
+        {character.map (char => (
 
+       <CharacterCard character={char} />
+       
+        ))}
+       
+      
+    
+    </section>
+    </div>
   );
 }
