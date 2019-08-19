@@ -27,12 +27,27 @@ Demonstrate your understanding of this Sprint's concepts by answering the follow
 
 - [ ] Explain benefit(s) using `client-side routing`?
 > Answer:
+-less data is processed, routing between views is generally faster.
+
+- whole page won’t refresh when using client-side routing
+
+- Smooth transitions and animations between views are easier to implement.
+
 - [ ] What does AJAX stand for?
 > Answer:
+AJAX stands for Asynchronous JavaScript and XML. AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script. Ajax uses XHTML for content, CSS for presentation, along with Document Object Model and JavaScript for dynamic content display
+
 - [ ] What are `controlled components` in React?
 > Answer:
+When the React component that renders a form also controls what happens in that form on subsequent user input. An input form element whose value is controlled by React in this way is called a “controlled component”.
+
 - [ ] Name three tools/libraries for making AJAX requests.
 > Answer:
+1)    Axios
+
+2)    Fetch API
+
+3)    Jquery
 
 ## Project Set Up
 
